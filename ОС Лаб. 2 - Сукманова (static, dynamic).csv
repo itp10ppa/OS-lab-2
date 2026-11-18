@@ -1,0 +1,505 @@
+PS C:\Users\nasty\IdeaProjects\OS - 4\out\production\OS1> $T_values = 1, 2, 3, 4, 5, 6, 7, 8, 10, 12, 16, 24
+PS C:\Users\nasty\IdeaProjects\OS - 4\out\production\OS1> foreach ($T in $T_values) {
+>>     Write-Host "--- T = $T ---"                                                                                                                                                  
+>>     for ($i = 1; $i -le 3; $i++) {                                                                                                                                               
+>>         java MatMul 1500 1500 1500 $T bench static                                                                                                                               
+>>     }
+>> }
+--- T = 1 ---
+
+Time: 4.8301937 s
+Checksum: 34210409067
+
+Time: 5.0635493 s
+Checksum: 34174733440
+
+Time: 5.4818945 s
+Checksum: 34169418724
+--- T = 2 ---
+
+Time: 4.4253782 s
+Checksum: 34129317022
+
+Time: 4.1359429 s
+Checksum: 34211064483
+
+Time: 4.5962182 s
+Checksum: 34186558164
+--- T = 3 ---
+
+Time: 3.627043 s
+Checksum: 34178324661
+
+Time: 3.6746179 s
+Checksum: 34238149640
+
+Time: 3.6667457 s
+Checksum: 34145291448
+--- T = 4 ---
+
+Time: 2.8392536 s
+Checksum: 34211697907
+
+Time: 3.27657 s
+Checksum: 34201466781
+
+Time: 3.0838841 s
+Checksum: 34214198018
+--- T = 5 ---
+
+Time: 2.6441347 s
+Checksum: 34163798267
+
+Time: 2.5798919 s
+Checksum: 34177339544
+
+Time: 2.6703974 s
+Checksum: 34227512186
+--- T = 6 ---
+
+Time: 2.2997024 s
+Checksum: 34197238571
+
+Time: 2.1964 s
+Checksum: 34216974851
+
+Time: 2.3284591 s
+Checksum: 34207405081
+--- T = 7 ---
+
+Time: 1.9913655 s
+Checksum: 34205323017
+
+Time: 2.1277944 s
+Checksum: 34183166446
+
+Time: 1.977995 s
+Checksum: 34189803012
+--- T = 8 ---
+
+Time: 1.8989017 s
+Checksum: 34198764780
+
+Time: 1.864465 s
+Checksum: 34191036556
+
+Time: 1.7730604 s
+Checksum: 34139206098
+--- T = 10 ---
+
+Time: 1.591555 s
+Checksum: 34182138394
+
+Time: 1.5794831 s
+Checksum: 34214143496
+
+Time: 1.548488 s
+Checksum: 34232239382
+--- T = 12 ---
+
+Time: 1.371485 s
+Checksum: 34182616076
+
+Time: 1.4017534 s
+Checksum: 34188615241
+
+Time: 1.4097807 s
+Checksum: 34201132937
+--- T = 16 ---
+
+Time: 1.2518517 s
+Checksum: 34237925852
+
+Time: 1.1893835 s
+Checksum: 34211222275
+
+Time: 1.2599848 s
+Checksum: 34173184272
+--- T = 24 ---
+
+Time: 1.1151963 s
+Checksum: 34171285967
+
+Time: 1.0248745 s
+Checksum: 34197062034
+
+Time: 1.0876436 s
+Checksum: 34163185941
+PS C:\Users\nasty\IdeaProjects\OS - 4\out\production\OS1> foreach ($T in $T_values) {                       
+>>     Write-Host "--- T = $T ---"                                                                                                                                                  
+>>     for ($i = 1; $i -le 3; $i++) {                                                                                                                                               
+>>         java MatMul 1500 1500 1500 $T bench dynamic                                                                                                                              
+>>     }                                                                                                                                                                            
+>> }                                                                                                                                                                                
+--- T = 1 ---
+
+Time: 5.5506171 s
+Checksum: 34200096378
+
+Time: 5.4592374 s
+Checksum: 34146165073
+
+Time: 5.1615319 s
+Checksum: 34232343595
+--- T = 2 ---
+
+Time: 2.8984588 s
+Checksum: 34178065612
+
+Time: 3.0025589 s
+Checksum: 34207474680
+
+Time: 2.8304958 s
+Checksum: 34244648499
+--- T = 3 ---
+
+Time: 1.9826791 s
+Checksum: 34224897237
+
+Time: 1.8917997 s
+Checksum: 34169302676
+
+Time: 1.9517742 s
+Checksum: 34192615687
+--- T = 4 ---
+
+Time: 1.4211251 s
+Checksum: 34229411931
+
+Time: 1.4172521 s
+Checksum: 34188784892
+
+Time: 1.440398 s
+Checksum: 34145099203
+--- T = 5 ---
+
+Time: 1.2422246 s
+Checksum: 34193952234
+
+Time: 1.170696 s
+Checksum: 34263390848
+
+Time: 1.1879983 s
+Checksum: 34214922795
+--- T = 6 ---
+
+Time: 1.1610212 s
+Checksum: 34184111646
+
+Time: 1.0979809 s
+Checksum: 34170254056
+
+Time: 1.0534205 s
+Checksum: 34150641114
+--- T = 7 ---
+
+Time: 0.9886611 s
+Checksum: 34163891980
+
+Time: 1.003497 s
+Checksum: 34157065943
+
+Time: 0.9797195 s
+Checksum: 34181151302
+--- T = 8 ---
+
+Time: 0.9148903 s
+Checksum: 34199749705
+
+Time: 1.0562096 s
+Checksum: 34184453813
+
+Time: 1.0908973 s
+Checksum: 34209363796
+--- T = 10 ---
+
+Time: 0.997415 s
+Checksum: 34179150652
+
+Time: 0.9764106 s
+Checksum: 34173484178
+
+Time: 1.0127703 s
+Checksum: 34171296108
+--- T = 12 ---
+
+Time: 1.0086129 s
+Checksum: 34160251949
+
+Time: 1.1186877 s
+Checksum: 34152224742
+
+Time: 1.1403003 s
+Checksum: 34191233497
+--- T = 16 ---
+
+Time: 1.096221 s
+Checksum: 34190628051
+
+Time: 1.0662695 s
+Checksum: 34219378041
+
+Time: 1.0525827 s
+Checksum: 34175882456
+--- T = 24 ---
+
+Time: 1.0600583 s
+Checksum: 34198871885
+
+Time: 1.0521061 s
+Checksum: 34191078137
+
+Time: 1.1099233 s
+Checksum: 34202943286
+PS C:\Users\nasty\IdeaProjects\OS - 4\out\production\OS1> foreach ($T in $T_values) {
+>>     Write-Host "--- T = $T ---"                                                                                                                                                  
+>>     for ($i = 1; $i -le 3; $i++) {                                                                                                                                               
+>>         java MatMul 1000 1000 1000 $T bench static                                                                                                                               
+>>     }                                                                                                                                                                            
+>> }                                                                                                                                                                                
+--- T = 1 ---
+
+Time: 0.7251388 s
+Checksum: 10152679528
+
+Time: 0.7897535 s
+Checksum: 10138180134
+
+Time: 0.7733737 s
+Checksum: 10134133894
+--- T = 2 ---
+
+Time: 0.5793098 s
+Checksum: 10142674535
+
+Time: 0.5972187 s
+Checksum: 10134602221
+
+Time: 0.5819961 s
+Checksum: 10132372516
+--- T = 3 ---
+
+Time: 0.4727947 s
+Checksum: 10128051750
+
+Time: 0.5338862 s
+Checksum: 10138311936
+
+Time: 0.4512199 s
+Checksum: 10134902173
+--- T = 4 ---
+
+Time: 0.3758993 s
+Checksum: 10141328136
+
+Time: 0.6447681 s
+Checksum: 10137529350
+
+Time: 0.3983776 s
+Checksum: 10141047049
+--- T = 5 ---
+
+Time: 0.3081613 s
+Checksum: 10112082515
+
+Time: 0.3447403 s
+Checksum: 10117702895
+
+Time: 0.3394393 s
+Checksum: 10144064132
+--- T = 6 ---
+
+Time: 0.3305575 s
+Checksum: 10135909045
+
+Time: 0.2660577 s
+Checksum: 10138907022
+
+Time: 0.2678906 s
+Checksum: 10146174186
+--- T = 7 ---
+
+Time: 0.2902827 s
+Checksum: 10157455854
+
+Time: 0.2982926 s
+Checksum: 10129512501
+
+Time: 0.2559823 s
+Checksum: 10131182334
+--- T = 8 ---
+
+Time: 0.213836 s
+Checksum: 10134840170
+
+Time: 0.2027328 s
+Checksum: 10143618976
+
+Time: 0.2608658 s
+Checksum: 10139704598
+--- T = 10 ---
+
+Time: 0.1886931 s
+Checksum: 10133983131
+
+Time: 0.2037839 s
+Checksum: 10141112026
+
+Time: 0.2179259 s
+Checksum: 10137457541
+--- T = 12 ---
+
+Time: 0.1999261 s
+Checksum: 10123618353
+
+Time: 0.2025327 s
+Checksum: 10136874487
+
+Time: 0.2765015 s
+Checksum: 10136564434
+--- T = 16 ---
+
+Time: 0.1852529 s
+Checksum: 10126847801
+
+Time: 0.2290341 s
+Checksum: 10131928459
+
+Time: 0.2195691 s
+Checksum: 10145542421
+--- T = 24 ---
+
+Time: 0.2038421 s
+Checksum: 10148615480
+
+Time: 0.216941 s
+Checksum: 10145345922
+
+Time: 0.2311277 s
+Checksum: 10117718419
+PS C:\Users\nasty\IdeaProjects\OS - 4\out\production\OS1> foreach ($T in $T_values) {
+>>     Write-Host "--- T = $T ---"                                                                                                                                                  
+>>     for ($i = 1; $i -le 3; $i++) {                                                                                                                                               
+>>         java MatMul 1000 1000 1000 $T bench dynamic                                                                                                                              
+>>     }                                                                                                                                                                            
+>> }                                                                                                                                                                                
+--- T = 1 ---
+
+Time: 0.689503 s
+Checksum: 10147233472
+
+Time: 0.744787 s
+Checksum: 10124968543
+
+Time: 0.7231928 s
+Checksum: 10135582086
+--- T = 2 ---
+
+Time: 0.4753993 s
+Checksum: 10135202202
+
+Time: 0.3663718 s
+Checksum: 10133002737
+
+Time: 0.3818975 s
+Checksum: 10151063970
+--- T = 3 ---
+
+Time: 0.2656892 s
+Checksum: 10102915087
+
+Time: 0.2633364 s
+Checksum: 10155665961
+
+Time: 0.2205562 s
+Checksum: 10133420710
+--- T = 4 ---
+
+Time: 0.1936349 s
+Checksum: 10131693435
+
+Time: 0.1907685 s
+Checksum: 10148030936
+
+Time: 0.1978274 s
+Checksum: 10141748596
+--- T = 5 ---
+
+Time: 0.1686073 s
+Checksum: 10139602163
+
+Time: 0.1726271 s
+Checksum: 10115129048
+
+Time: 0.2045551 s
+Checksum: 10134191302
+--- T = 6 ---
+
+Time: 0.1479268 s
+Checksum: 10129968525
+
+Time: 0.2159037 s
+Checksum: 10145431256
+
+Time: 0.181165 s
+Checksum: 10134360791
+--- T = 7 ---
+
+Time: 0.1636303 s
+Checksum: 10123589695
+
+Time: 0.207584 s
+Checksum: 10139279684
+
+Time: 0.162463 s
+Checksum: 10127842890
+--- T = 8 ---
+
+Time: 0.1595832 s
+Checksum: 10117759467
+
+Time: 0.167138 s
+Checksum: 10134107322
+
+Time: 0.1841071 s
+Checksum: 10131422386
+--- T = 10 ---
+
+Time: 0.1980298 s
+Checksum: 10157884463
+
+Time: 0.1940732 s
+Checksum: 10137789668
+
+Time: 0.1925793 s
+Checksum: 10147297148
+--- T = 12 ---
+
+Time: 0.2115231 s
+Checksum: 10146876770
+
+Time: 0.2007729 s
+Checksum: 10133655318
+
+Time: 0.2218953 s
+Checksum: 10133283322
+--- T = 16 ---
+
+Time: 0.2002111 s
+Checksum: 10126090841
+
+Time: 0.2088599 s
+Checksum: 10134095980
+
+Time: 0.202285 s
+Checksum: 10119352023
+--- T = 24 ---
+
+Time: 0.2088409 s
+Checksum: 10153720119
+
+Time: 0.2151094 s
+Checksum: 10114839733
+
+Time: 0.2128637 s
+Checksum: 10143370001
